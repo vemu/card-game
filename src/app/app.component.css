@@ -1,0 +1,22 @@
+.row-container {
+    padding: 20px;
+}
+.row-container-details {
+    background-color: ghostwhite
+}
+
+.card {
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.card:hover {
+    background-color: ghostwhite;
+    transform: scale(1.05);
+}
+
+.card-body h5, h6, p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
