@@ -1,10 +1,10 @@
 .card {
     cursor: pointer;
-    transition: transform .5s;
+    transition: transform .25s;
 }
 
 .card:hover, .selected{
-    background-color: ghostwhite;
+    background-color: aqua;
     transform: scale(1.05);
 }
 
@@ -12,4 +12,9 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.row-container-overview {
+    background-color: ghostwhite;
+    justify-content: center;
 }
