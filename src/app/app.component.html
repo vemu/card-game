@@ -1,42 +1,11 @@
-<div class="container" *ngIf="selectedPlayer">
-  <h2>Details</h2>
-  <div class="row row-container row-container-details">
-    <!-- Details panel -->
-    <div class="col">
-      <h3>{{selectedPlayer.realName}}</h3>
-      <h4>{{selectedPlayer.playerName}}</h4>
-      <p>{{selectedPlayer.asset}}</p>
-    </div>
-  </div>
-</div>
 <div class="container">
   <div class="row">
-    <!-- Overview panel -->
     <div class="col col-lg-8">
-      <h2>Overview</h2>
-      <div class="row row-container">
-        <div class="col-lg-3 card m-2 shadow rounded" *ngFor="let player of players"
-          (click)="showPlayerDetails(player)">
-          <div class="card-body">
-            <h5 class="card-title">{{player.realName}}</h5>
-            <h6 class="card-subtitle mb-2">{{player.playerName}}</h6>
-            <p class="card-text">{{player.asset}}</p>
-          </div>
-        </div>
-      </div>
+      <app-player-detail></app-player-detail>
+      <app-players-overview></app-players-overview>
     </div>
-    <!-- Control panel -->
     <div class="col col-lg-4">
-      <h2>Controls</h2>
-      <div class="row row-container">
-        <div class="col">
-          <button type="button" class="btn btn-block btn-primary" (click)="sortAsc()">SORT ASC</button>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-block btn-secondary" (click)="sortDesc()">SORT DESC</button>
-        </div>
-      </div>
-      <button type="button" class="btn btn-block btn-secondary">SUBMIT</button>
+      <app-controls></app-controls>
     </div>
   </div>
 </div>

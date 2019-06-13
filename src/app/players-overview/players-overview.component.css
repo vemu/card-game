@@ -1,0 +1,15 @@
+.card {
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.card:hover, .selected{
+    background-color: ghostwhite;
+    transform: scale(1.05);
+}
+
+.card-body h5, h6, p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

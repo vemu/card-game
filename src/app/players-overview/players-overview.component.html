@@ -1,0 +1,13 @@
+
+<h2>Overview</h2>
+<div class="row row-container">
+  <div class="col-lg-3 card m-2 shadow rounded" *ngFor="let player of players"
+    [class.selected]="player === selectedPlayer" (click)="showPlayerDetails(player)">
+    <div class="card-body">
+      <h5 class="card-title">{{player.realName}}</h5>
+      <h6 class="card-subtitle mb-2">{{player.playerName}}</h6>
+      <p class="card-text">{{player.asset}}</p>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,12 @@
+<!-- Control panel -->
+<h2>Controls</h2>
+<div class="row row-container">
+  <div class="col">
+    <button type="button" class="btn btn-block btn-success" (click)="sortAsc()">SORT ASC</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-block btn-info" (click)="sortDesc()">SORT DESC</button>
+  </div>
+</div>
+<button type="button" class="btn btn-block btn-primary" (click)="submitPlayer()"
+  [disabled]="!playerSelectedFromOverview">SUBMIT</button>
