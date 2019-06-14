@@ -9,6 +9,9 @@ import { Player } from '../player';
 })
 export class ControlsComponent implements OnInit {
   playerSelectedFromOverview: Player;
+  playerSubmitted: boolean = false;
+  playerToSubmit: string;
+
   constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
@@ -24,7 +27,14 @@ export class ControlsComponent implements OnInit {
   }
 
   submitPlayer() {
-    // POST this player to BE
+    this.playerToSubmit = this.playerSelectedFromOverview.realName;
+    this.playerSubmitted = true;
+
+    setTimeout(() => {
+      this.playerSubmitted = false;
+    }, 2000);
+    
+    // Mock-POST this player to BE
     this.playerService.postPlayerData(this.playerSelectedFromOverview);
   }
 }

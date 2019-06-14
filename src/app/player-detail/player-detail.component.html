@@ -1,11 +1,11 @@
 <!-- Details panel -->
 <div *ngIf="player">
-  <h2>Details</h2>
+  <h2>Player Details</h2>
   <div class="row row-container row-container-details">
     <div class="col">
-      <h3 class="text-primary">{{player.realName}}</h3>
-      <h4 class="text-success">{{player.playerName}}</h4>
-      <p class="text-info">{{player.asset}}</p>
+      <h4>Real Name: <span class="text-primary">{{player.realName}}</span></h4>
+      <h5>Player Name: <span class="text-success">{{player.playerName}}</span></h5>
+      <h6>Asset: <span class="text-info">{{player.asset}}</span></h6>
     </div>
   </div>
 </div>

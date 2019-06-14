@@ -10,4 +10,5 @@
 
   <button type="button" class="btn btn-block btn-primary" (click)="submitPlayer()"
     [disabled]="!playerSelectedFromOverview">SUBMIT</button>
+  <p class="text-info text-center" *ngIf="playerSubmitted">Your player <b>{{playerToSubmit}}</b> is successfully submitted</p>
 </div>
